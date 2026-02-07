@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout << "enter how many ID's you want to enter:";
+    cin >> n;
+    int i;
+    int id;
+    for (i = 1; i <= n; i++)
+    {
+        cout << "enter " << i << " id:";
+        cin >> id;
+        if ((id % 3 == 0) && (id % 5 == 0))
+        {
+            cout << "BuzzFuzz" << endl;
+        }
+        else if (id % 5 == 0)
+        {
+            cout << "Fuzz" << endl;
+        }
+        else if (id % 3 == 0)
+        {
+            cout << "Buzz" << endl;
+        }
+    }
+    return 0;
+}
