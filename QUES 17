@@ -1,0 +1,36 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    int n;
+    cout << "Enter the number:";
+    cin >> n;
+    int copy;
+    copy = n;
+    int count;
+    count = 0;
+    while (n != 0)
+    {
+        count++;
+        n = n / 10;
+    }
+    int result = 0;
+    n = copy;
+    int digit;
+    while (n != 0)
+    {
+        digit = n % 10;
+        result = result + pow(digit, count);
+        n = n / 10;
+    }
+    if (result == copy)
+    {
+        cout << "given number is an armstrong number";
+    }
+    else
+    {
+        cout << "given number is not an armstrong number";
+    }
+    return 0;
+}
