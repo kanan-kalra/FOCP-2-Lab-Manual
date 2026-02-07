@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cctype>
+using namespace std;
+int main()
+{
+    char ch;
+    cout << "Enter the character:";
+    cin >> ch;
+    ch = tolower(ch);
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+    {
+        cout << "Given character is a vowel ";
+    }
+    else if (ch >= 'a' && ch <= 'z')
+    {
+        cout << "Given character is a consonant";
+    }
+    else if (ch >= '0' && ch <= '9')
+    {
+        cout << "Given character is a number";
+    }
+    else
+    {
+        cout << "invalid";
+    }
+    return 0;
+}
